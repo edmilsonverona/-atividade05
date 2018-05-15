@@ -24,6 +24,9 @@ public class CalculadoraSalarioTeste {
     @Test
     public void calculaDescontoSalarioDesenvolvedor() {
         Funcionario func = new Funcionario("JOÃO", "joao@email.com", Cargo.DESENVOLVEDOR, 4000D);
+        CalculadoraDescontoSalario calculadora = new CalculadoraDescontoSalario();
+        Double salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(2800D, salarioComDesconto, 0.01);
     
     }
 }
