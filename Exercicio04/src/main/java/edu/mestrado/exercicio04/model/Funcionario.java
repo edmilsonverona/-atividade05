@@ -11,10 +11,11 @@ package edu.mestrado.exercicio04.model;
  */
 public class Funcionario {
     
-    private String nome, email, cargo;
+    private String nome, email;
+    private Cargo cargo;
     private double salario;
 
-    public Funcionario(String nome, String email, String cargo, double salario) {
+    public Funcionario(String nome, String email, Cargo cargo, double salario) {
         this.nome = nome;
         this.email = email;
         this.cargo = cargo;
@@ -37,11 +38,11 @@ public class Funcionario {
         this.email = email;
     }
 
-    public String getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import edu.mestrado.exercicio04.model.Cargo;
+import edu.mestrado.exercicio04.model.Funcionario;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -20,7 +22,8 @@ public class CalculadoraSalarioTeste {
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void calculaDescontoSalarioPorCargo() {
+    public void calculaDescontoSalarioDesenvolvedor() {
+        Funcionario func = new Funcionario("JOÃO", "joao@email.com", Cargo.DESENVOLVEDOR, 4000D);
     
     }
 }
