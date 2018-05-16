@@ -43,7 +43,7 @@ public class CalculadoraSalarioTeste {
         
         func = new Funcionario("JOSE", "jose@email.com", Cargo.DBA, 1000D);
         salarioComDesconto = calculadora.calcularDescontos(func);
-        assertEquals(750D, salarioComDesconto, 0.01);
+        assertEquals(850D, salarioComDesconto, 0.01);
     
     }
 }
