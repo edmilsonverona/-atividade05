@@ -27,6 +27,10 @@ public class CalculadoraSalarioTeste {
         CalculadoraDescontoSalario calculadora = new CalculadoraDescontoSalario();
         Double salarioComDesconto = calculadora.calcularDescontos(func);
         assertEquals(2800D, salarioComDesconto, 0.01);
+        
+        func = new Funcionario("JOÃO", "joao@email.com", Cargo.DESENVOLVEDOR, 2000D);
+        salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(1800D, salarioComDesconto, 0.01);
     
     }
 }
