@@ -28,9 +28,22 @@ public class CalculadoraSalarioTeste {
         Double salarioComDesconto = calculadora.calcularDescontos(func);
         assertEquals(2800D, salarioComDesconto, 0.01);
         
-        func = new Funcionario("JOÃO", "joao@email.com", Cargo.DESENVOLVEDOR, 2000D);
+        func = new Funcionario("JOSE", "jose@email.com", Cargo.DESENVOLVEDOR, 2000D);
         salarioComDesconto = calculadora.calcularDescontos(func);
         assertEquals(1800D, salarioComDesconto, 0.01);
+    
+    }
+    
+    @Test
+    public void calculaDescontoSalarioDBA() {
+        Funcionario func = new Funcionario("JOÃO", "joao@email.com", Cargo.DBA, 2000D);
+        CalculadoraDescontoSalario calculadora = new CalculadoraDescontoSalario();
+        Double salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(1500D, salarioComDesconto, 0.01);
+        
+        func = new Funcionario("JOSE", "jose@email.com", Cargo.DBA, 1000D);
+        salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(750D, salarioComDesconto, 0.01);
     
     }
 }
