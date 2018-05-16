@@ -1,3 +1,5 @@
+package edu.mestrado.exercicio04.calculadora;
+
 
 import edu.mestrado.exercicio04.model.Cargo;
 import edu.mestrado.exercicio04.model.Funcionario;

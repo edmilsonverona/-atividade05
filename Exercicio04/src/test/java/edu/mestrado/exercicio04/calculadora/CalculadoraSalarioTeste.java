@@ -1,3 +1,5 @@
+package edu.mestrado.exercicio04.calculadora;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,6 +7,8 @@
  */
 
 import edu.mestrado.exercicio04.model.Cargo;
+import edu.mestrado.exercicio04.model.Cargo;
+import edu.mestrado.exercicio04.model.Funcionario;
 import edu.mestrado.exercicio04.model.Funcionario;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -42,6 +46,19 @@ public class CalculadoraSalarioTeste {
         assertEquals(1500D, salarioComDesconto, 0.01);
         
         func = new Funcionario("JOSE", "jose@email.com", Cargo.DBA, 1000D);
+        salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(850D, salarioComDesconto, 0.01);
+    
+    }
+    
+    @Test
+    public void calculaDescontoSalarioTestador() {
+        Funcionario func = new Funcionario("JOÃO", "joao@email.com", Cargo.TESTADOR, 2000D);
+        CalculadoraDescontoSalario calculadora = new CalculadoraDescontoSalario();
+        Double salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(1500D, salarioComDesconto, 0.01);
+        
+        func = new Funcionario("JOSE", "jose@email.com", Cargo.TESTADOR, 1000D);
         salarioComDesconto = calculadora.calcularDescontos(func);
         assertEquals(850D, salarioComDesconto, 0.01);
     
