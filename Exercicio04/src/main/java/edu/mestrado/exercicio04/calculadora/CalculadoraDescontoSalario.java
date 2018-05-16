@@ -24,7 +24,7 @@ public class CalculadoraDescontoSalario {
            } else {
                salarioDescontado =  func.getSalario() - (func.getSalario() * 0.1);
            }
-       } else if (func.getCargo().equals(Cargo.DBA)){
+       } else if (func.getCargo().equals(Cargo.DBA) || func.getCargo().equals(Cargo.TESTADOR)){
            if (func.getSalario() >= 2000D){
                salarioDescontado =  func.getSalario() - (func.getSalario() * 0.25);
            } else {

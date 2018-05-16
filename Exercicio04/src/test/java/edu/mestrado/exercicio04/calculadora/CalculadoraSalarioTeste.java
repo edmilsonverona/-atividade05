@@ -35,7 +35,6 @@ public class CalculadoraSalarioTeste {
         func = new Funcionario("JOSE", "jose@email.com", Cargo.DESENVOLVEDOR, 2000D);
         salarioComDesconto = calculadora.calcularDescontos(func);
         assertEquals(1800D, salarioComDesconto, 0.01);
-    
     }
     
     @Test
@@ -48,7 +47,6 @@ public class CalculadoraSalarioTeste {
         func = new Funcionario("JOSE", "jose@email.com", Cargo.DBA, 1000D);
         salarioComDesconto = calculadora.calcularDescontos(func);
         assertEquals(850D, salarioComDesconto, 0.01);
-    
     }
     
     @Test
@@ -61,6 +59,18 @@ public class CalculadoraSalarioTeste {
         func = new Funcionario("JOSE", "jose@email.com", Cargo.TESTADOR, 1000D);
         salarioComDesconto = calculadora.calcularDescontos(func);
         assertEquals(850D, salarioComDesconto, 0.01);
+    }
+    
+    @Test
+    public void calculaDescontoSalarioGerente() {
+        Funcionario func = new Funcionario("JOÃO", "joao@email.com", Cargo.GERENTE, 6000D);
+        CalculadoraDescontoSalario calculadora = new CalculadoraDescontoSalario();
+        Double salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(2000D, salarioComDesconto, 0.01);
+        
+        func = new Funcionario("JOSE", "jose@email.com", Cargo.GERENTE, 1000D);
+        salarioComDesconto = calculadora.calcularDescontos(func);
+        assertEquals(800D, salarioComDesconto, 0.01);
     
     }
 }
