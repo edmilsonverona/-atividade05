@@ -30,6 +30,12 @@ public class CalculadoraDescontoSalario {
            } else {
                salarioDescontado =  func.getSalario() - (func.getSalario() * 0.15);
            }
+       } else if (func.getCargo().equals(Cargo.GERENTE)){
+           if (func.getSalario() >= 5000D){
+               salarioDescontado =  func.getSalario() - (func.getSalario() * 0.3);
+           } else {
+               salarioDescontado =  func.getSalario() - (func.getSalario() * 0.2);
+           }
        } 
        return salarioDescontado;
     }
